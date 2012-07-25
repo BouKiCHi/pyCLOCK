@@ -728,7 +728,7 @@ def alarm_loop():
 										
 				if event.key == pygame.K_RETURN:
 					if pos == 2:
-						 do_sleep()
+						do_sleep()
 				
 					if pos == 3:
 						calc_alarm()
@@ -744,7 +744,7 @@ def alarm_loop():
 				alarm_flag = True
 				pygame.mixer.music.load("tone.wav")
 				pygame.mixer.music.play(-1)
-	
+				
 				
 		disp_alarm(pos)
 		pygame.display.update()
