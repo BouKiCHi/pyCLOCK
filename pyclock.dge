@@ -1,8 +1,12 @@
 #!/usr/bin/python
 #
-# PyCLOCK 1.0 Copyright (C) 2012 by BouKiCHi
+# PyCLOCK 1.01 Copyright (C) 2012 by BouKiCHi
 #
-# The code is provided under the MIT License 
+# 
+# 1.01 : hwclock problem is fixed , thanks mth.
+# 1.0  : First release
+#
+# The code is provided under the MIT License
 #
 # Please see the below URL for the detail
 # http://opensource.org/licenses/mit-license.php
@@ -116,7 +120,7 @@ def do_setup():
 	print cmd_str
 	
 	os.system( cmd_str )
-	os.system( "hwclock -w" )
+	os.system( "hwclock -uw" )
 
 
 
@@ -150,7 +154,7 @@ def draw_string_s ( msg , x , y , color , center = False ):
 def base_screen():
 	bg_color = [ 0 , 0 , 255 ]
 	screen.fill( bg_color )
-	screen.blit( font_s.render("pyCLOCK 1.0", True , color_white ) , (0,0) )
+	screen.blit( font_s.render("pyCLOCK 1.01", True , color_white ) , (0,0) )
 
 
 #
